@@ -164,10 +164,28 @@ public class Calculadora extends JFrame {
         btnIgual.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("=");
-                numero2 = operaciones.convertirNum(textoActual);//Convierte en numero tipo Double el texto y almacena en variable
-                textoActual = operaciones.calcularResultado(numero1, numero2, operador);//Realiza el calculo segun el operador almacenado y almacena en variable
-                lblResultado.setText(textoActual);//Modifica el texto en el label con el resultado del caluclo
+
+                try {
+
+                    numero2 = operaciones.convertirNum(textoActual);
+
+                    textoActual = operaciones.calcularResultado(
+                            numero1,
+                            numero2,
+                            operador
+                    );
+
+                    lblResultado.setText(textoActual);
+
+                } catch (ArithmeticException ex) {
+
+                    lblResultado.setText("Error");
+
+                    textoActual = "0";
+                    numero1 = 0;
+                    numero2 = 0;
+                    operador = "";
+                }
             }
         });
 
