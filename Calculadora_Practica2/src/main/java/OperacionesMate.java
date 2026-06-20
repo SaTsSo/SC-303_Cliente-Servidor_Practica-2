@@ -9,7 +9,7 @@ public class OperacionesMate {
     //Metodos
 
     public String agregarNumero (String textoActual, String numero){
-        if (textoActual.equals("0") && !textoActual.equals(".")){
+        if (textoActual.equals("0") && !textoActual.equals(".")){ //se añade equals para ignorar el punto y borrarlo
             System.out.println(numero);
             return numero;
         }else {

@@ -55,10 +55,10 @@ public class Calculadora extends JFrame {
         btn0.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(mostrarResultado){
-                    textoActual = "0";
+                if(mostrarResultado){// con este if controlamos que no se precione multiples veces el boton igual y arroje multiples errores
+                    textoActual = "0";// seteamos en 0 para no imprimir a la par del resultado
                 }
-                mostrarResultado = false;
+                mostrarResultado = false; // reiniciamos el control de presion multiple del igual
                 textoActual = operaciones.agregarNumero(textoActual, "0");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -66,10 +66,10 @@ public class Calculadora extends JFrame {
         btn1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(mostrarResultado){
-                    textoActual = "0";
+                if(mostrarResultado){// con este if controlamos que no se precione multiples veces el boton igual y arroje multiples errores
+                    textoActual = "0";// seteamos en 0 para no imprimir a la par del resultado
                 }
-                mostrarResultado = false;
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
 
                 textoActual = operaciones.agregarNumero(textoActual, "1");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
@@ -78,10 +78,10 @@ public class Calculadora extends JFrame {
         btn2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(mostrarResultado){
-                    textoActual = "0";
+                if(mostrarResultado){// con este if controlamos que no se precione multiples veces el boton igual y arroje multiples errores
+                    textoActual = "0";// seteamos en 0 para no imprimir a la par del resultado
                 }
-                mostrarResultado = false;
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
 
                 textoActual = operaciones.agregarNumero(textoActual, "2");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
@@ -90,10 +90,10 @@ public class Calculadora extends JFrame {
         btn3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(mostrarResultado){
-                    textoActual = "0";
+                if(mostrarResultado){// con este if controlamos que no se precione multiples veces el boton igual y arroje multiples errores
+                    textoActual = "0";// seteamos en 0 para no imprimir a la par del resultado
                 }
-                mostrarResultado = false;
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
 
                 textoActual = operaciones.agregarNumero(textoActual, "3");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
@@ -102,10 +102,10 @@ public class Calculadora extends JFrame {
         btn4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(mostrarResultado){
-                    textoActual = "0";
+                if(mostrarResultado){ // con este if controlamos que no se precione multiples veces el boton igual y arroje multiples errores
+                    textoActual = "0"; // seteamos en 0 para no imprimir a la par del resultado
                 }
-                mostrarResultado = false;
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
 
                 textoActual = operaciones.agregarNumero(textoActual, "4");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
@@ -114,10 +114,10 @@ public class Calculadora extends JFrame {
         btn5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(mostrarResultado){
-                    textoActual = "0";
+                if(mostrarResultado){// con este if controlamos que no se precione multiples veces el boton igual y arroje multiples errores
+                    textoActual = "0";// seteamos en 0 para no imprimir a la par del resultado
                 }
-                mostrarResultado = false;
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
 
                 textoActual = operaciones.agregarNumero(textoActual, "5");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
@@ -126,10 +126,10 @@ public class Calculadora extends JFrame {
         btn6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(mostrarResultado){
-                    textoActual = "0";
+                if(mostrarResultado){// con este if controlamos que no se precione multiples veces el boton igual y arroje multiples errores
+                    textoActual = "0";// seteamos en 0 para no imprimir a la par del resultado
                 }
-                mostrarResultado = false;
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
 
                 textoActual = operaciones.agregarNumero(textoActual, "6");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
@@ -138,10 +138,10 @@ public class Calculadora extends JFrame {
         btn7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(mostrarResultado){
-                    textoActual = "0";
+                if(mostrarResultado){// con este if controlamos que no se precione multiples veces el boton igual y arroje multiples errores
+                    textoActual = "0";// seteamos en 0 para no imprimir a la par del resultado
                 }
-                mostrarResultado = false;
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
 
                 textoActual = operaciones.agregarNumero(textoActual, "7");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
@@ -150,10 +150,10 @@ public class Calculadora extends JFrame {
         btn8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(mostrarResultado){
-                    textoActual = "0";
+                if(mostrarResultado){// con este if controlamos que no se precione multiples veces el boton igual y arroje multiples errores
+                    textoActual = "0";// seteamos en 0 para no imprimir a la par del resultado
                 }
-                mostrarResultado = false;
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
 
                 textoActual = operaciones.agregarNumero(textoActual, "8");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
@@ -162,10 +162,10 @@ public class Calculadora extends JFrame {
         btn9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(mostrarResultado){
-                    textoActual = "0";
+                if(mostrarResultado){// con este if controlamos que no se precione multiples veces el boton igual y arroje multiples errores
+                    textoActual = "0";// seteamos en 0 para no imprimir a la par del resultado
                 }
-                mostrarResultado = false;
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
 
                 textoActual = operaciones.agregarNumero(textoActual, "9");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
@@ -178,14 +178,14 @@ public class Calculadora extends JFrame {
         btnSuma.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mostrarResultado = false;
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
 
-                if (!operadorPresionado) {
+                if (!operadorPresionado) {// controlamos el presionamiento del operador
                     operador = "+";//Almacena el tipo de operacion en la variabel
                     System.out.println(operador);
                     numero1 = operaciones.convertirNum(textoActual);//Convierte en numero tipo Double el texto y almacena en variable
                     textoActual = "0";//Resetea el texto a cero
-                    operadorPresionado = true;
+                    operadorPresionado = true;// hacemos que sea true para que no se presione varias veces el operador
                 }
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -193,30 +193,39 @@ public class Calculadora extends JFrame {
         btnResta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mostrarResultado = false;
-                operador = "-";
-                numero1 = operaciones.convertirNum(textoActual);
-                textoActual = "0";
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
+                if (!operadorPresionado) {// controlamos el presionamiento del operador
+                    operador = "-";
+                    numero1 = operaciones.convertirNum(textoActual);
+                    textoActual = "0";
+                    operadorPresionado = true;// hacemos que sea true para que no se presione varias veces el operador
+                }
                 lblResultado.setText(textoActual);
             }
         });
         btnMultiplicacion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mostrarResultado = false;
-                operador = "X";
-                numero1 = operaciones.convertirNum(textoActual);
-                textoActual = "0";
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
+                if (!operadorPresionado) {// controlamos el presionamiento del operador
+                    operador = "X";
+                    numero1 = operaciones.convertirNum(textoActual);
+                    textoActual = "0";
+                    operadorPresionado = true;// hacemos que sea true para que no se presione varias veces el operador
+                }
                 lblResultado.setText(textoActual);
             }
         });
         btnDivision.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mostrarResultado = false;
-                operador = "/";
-                numero1 = operaciones.convertirNum(textoActual);
-                textoActual = "0";
+                mostrarResultado = false;// reiniciamos el control de presion multiple del igual
+                if (!operadorPresionado) { // controlamos el presionamiento del operador
+                    operador = "/";
+                    numero1 = operaciones.convertirNum(textoActual);
+                    textoActual = "0";
+                    operadorPresionado = true;// hacemos que sea true para que no se presione varias veces el operador
+                }
                 lblResultado.setText(textoActual);
             }
         });
@@ -228,8 +237,7 @@ public class Calculadora extends JFrame {
 
                 try {
                     if(mostrarResultado){
-                        return;
-
+                        return; //Retornamos nada para que ignore la excepcion y errores
                     }
                     numero2 = operaciones.convertirNum(textoActual);
 
@@ -259,10 +267,10 @@ public class Calculadora extends JFrame {
         btnBorrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textoActual = "0";
+                textoActual = "0"; //limpiamos el texto
                 lblResultado.setText(textoActual);
-                operadorPresionado = false;
-                mostrarResultado= false;
+                operadorPresionado = false; //controladores de presionamiento
+                mostrarResultado= false;//controladores de presionamiento
             }
         });
 
@@ -273,16 +281,16 @@ public class Calculadora extends JFrame {
                 numero2 = 0;
                 operador = "";
                 textoActual = "0";
-                lblResultado.setText(textoActual);
-                operadorPresionado = false;
-                mostrarResultado= false;
+                lblResultado.setText(textoActual); //limpiamos toda la vista
+                operadorPresionado = false;//controladores de presionamiento
+                mostrarResultado= false;//controladores de presionamiento
             }
         });
 
         btnPunto.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textoActual = operaciones.agregarPunto(textoActual);
+                textoActual = operaciones.agregarPunto(textoActual); //agregamos punto al numero
 
                 lblResultado.setText(textoActual);
 
