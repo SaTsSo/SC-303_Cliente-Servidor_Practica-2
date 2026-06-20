@@ -1,4 +1,3 @@
-import java.security.PublicKey;
 
 public class OperacionesMate {
 
@@ -31,25 +30,28 @@ public class OperacionesMate {
         return textoActual;
     }
 
-    public String calcularResultado (double num1, double num2, String operador){
-        switch (operador){
-            //Suma
+    public String calcularResultado(double num1, double num2, String operador) {
+        switch (operador) {
+
             case "+":
                 System.out.println(num1 + num2);
-                return String.valueOf(num1 + num2); //Realiza la suma y devuelve el valor en String
+                return String.valueOf(num1 + num2);
+
             case "-":
                 return String.valueOf(num1 - num2);
+
             case "X":
                 return String.valueOf(num1 * num2);
+
             case "/":
-                if(num2 == 0)
-                     {
-                      throw new ArithmeticException("No se puede dividir entre cero");//Excepcion por division entre cero
-                 }
-    {
+                if (num2 == 0) {
+                    throw new ArithmeticException("No se puede dividir entre cero");
+                }
                 return String.valueOf(num1 / num2);
+
             default:
-                throw new IllegalArgumentException("Operador no válido: " + operador);//Excepcion
+                throw new IllegalArgumentException("Operador no válido: " + operador);
         }
     }
+
 }
