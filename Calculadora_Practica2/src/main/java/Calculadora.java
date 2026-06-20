@@ -1,8 +1,10 @@
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+
 
 public class Calculadora extends JFrame {
 
@@ -33,6 +35,8 @@ public class Calculadora extends JFrame {
     private double numero1 = 0;
     private double numero2 = 0;
     private OperacionesMate operaciones = new OperacionesMate (); //Instaciar objeto de OperacionesMate
+    private boolean mostrarResultado;
+    private boolean operadorPresionado;
 
 
     //Constructor
@@ -51,6 +55,10 @@ public class Calculadora extends JFrame {
         btn0.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(mostrarResultado){
+                    textoActual = "0";
+                }
+                mostrarResultado = false;
                 textoActual = operaciones.agregarNumero(textoActual, "0");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -58,6 +66,11 @@ public class Calculadora extends JFrame {
         btn1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(mostrarResultado){
+                    textoActual = "0";
+                }
+                mostrarResultado = false;
+
                 textoActual = operaciones.agregarNumero(textoActual, "1");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -65,6 +78,11 @@ public class Calculadora extends JFrame {
         btn2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(mostrarResultado){
+                    textoActual = "0";
+                }
+                mostrarResultado = false;
+
                 textoActual = operaciones.agregarNumero(textoActual, "2");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -72,6 +90,11 @@ public class Calculadora extends JFrame {
         btn3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(mostrarResultado){
+                    textoActual = "0";
+                }
+                mostrarResultado = false;
+
                 textoActual = operaciones.agregarNumero(textoActual, "3");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -79,6 +102,11 @@ public class Calculadora extends JFrame {
         btn4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(mostrarResultado){
+                    textoActual = "0";
+                }
+                mostrarResultado = false;
+
                 textoActual = operaciones.agregarNumero(textoActual, "4");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -86,6 +114,11 @@ public class Calculadora extends JFrame {
         btn5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(mostrarResultado){
+                    textoActual = "0";
+                }
+                mostrarResultado = false;
+
                 textoActual = operaciones.agregarNumero(textoActual, "5");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -93,6 +126,11 @@ public class Calculadora extends JFrame {
         btn6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(mostrarResultado){
+                    textoActual = "0";
+                }
+                mostrarResultado = false;
+
                 textoActual = operaciones.agregarNumero(textoActual, "6");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -100,6 +138,11 @@ public class Calculadora extends JFrame {
         btn7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(mostrarResultado){
+                    textoActual = "0";
+                }
+                mostrarResultado = false;
+
                 textoActual = operaciones.agregarNumero(textoActual, "7");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -107,6 +150,11 @@ public class Calculadora extends JFrame {
         btn8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(mostrarResultado){
+                    textoActual = "0";
+                }
+                mostrarResultado = false;
+
                 textoActual = operaciones.agregarNumero(textoActual, "8");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -114,6 +162,11 @@ public class Calculadora extends JFrame {
         btn9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(mostrarResultado){
+                    textoActual = "0";
+                }
+                mostrarResultado = false;
+
                 textoActual = operaciones.agregarNumero(textoActual, "9");//Segun el numero digitado agrega el digito al numero almacenado
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
@@ -125,16 +178,22 @@ public class Calculadora extends JFrame {
         btnSuma.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                operador = "+";//Almacena el tipo de operacion en la variabel
-                System.out.println(operador);
-                numero1 = operaciones.convertirNum(textoActual);//Convierte en numero tipo Double el texto y almacena en variable
-                textoActual = "0";//Resetea el texto a cero
+                mostrarResultado = false;
+
+                if (!operadorPresionado) {
+                    operador = "+";//Almacena el tipo de operacion en la variabel
+                    System.out.println(operador);
+                    numero1 = operaciones.convertirNum(textoActual);//Convierte en numero tipo Double el texto y almacena en variable
+                    textoActual = "0";//Resetea el texto a cero
+                    operadorPresionado = true;
+                }
                 lblResultado.setText(textoActual);//Modifica el texto en el label con el numero tipo String actual
             }
         });
         btnResta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                mostrarResultado = false;
                 operador = "-";
                 numero1 = operaciones.convertirNum(textoActual);
                 textoActual = "0";
@@ -144,6 +203,7 @@ public class Calculadora extends JFrame {
         btnMultiplicacion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                mostrarResultado = false;
                 operador = "X";
                 numero1 = operaciones.convertirNum(textoActual);
                 textoActual = "0";
@@ -153,6 +213,7 @@ public class Calculadora extends JFrame {
         btnDivision.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                mostrarResultado = false;
                 operador = "/";
                 numero1 = operaciones.convertirNum(textoActual);
                 textoActual = "0";
@@ -166,7 +227,10 @@ public class Calculadora extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 try {
+                    if(mostrarResultado){
+                        return;
 
+                    }
                     numero2 = operaciones.convertirNum(textoActual);
 
                     textoActual = operaciones.calcularResultado(
@@ -176,6 +240,9 @@ public class Calculadora extends JFrame {
                     );
 
                     lblResultado.setText(textoActual);
+                    mostrarResultado = true;
+                    operadorPresionado = false;
+
 
                 } catch (ArithmeticException ex) {
 
@@ -186,6 +253,39 @@ public class Calculadora extends JFrame {
                     numero2 = 0;
                     operador = "";
                 }
+            }
+        });
+
+        btnBorrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textoActual = "0";
+                lblResultado.setText(textoActual);
+                operadorPresionado = false;
+                mostrarResultado= false;
+            }
+        });
+
+        btnC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                numero1 = 0;
+                numero2 = 0;
+                operador = "";
+                textoActual = "0";
+                lblResultado.setText(textoActual);
+                operadorPresionado = false;
+                mostrarResultado= false;
+            }
+        });
+
+        btnPunto.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textoActual = operaciones.agregarPunto(textoActual);
+
+                lblResultado.setText(textoActual);
+
             }
         });
 

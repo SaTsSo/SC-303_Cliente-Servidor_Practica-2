@@ -9,7 +9,7 @@ public class OperacionesMate {
     //Metodos
 
     public String agregarNumero (String textoActual, String numero){
-        if (textoActual.equals("0")){
+        if (textoActual.equals("0") && !textoActual.equals(".")){
             System.out.println(numero);
             return numero;
         }else {
@@ -22,13 +22,21 @@ public class OperacionesMate {
         double numero = Double.parseDouble(textoActual);//Convierte el texto en numero de tipo Double
         return numero;
     };
+    public String agregarPunto(String textoActual){
+
+        if (!textoActual.contains(".")) {
+            return textoActual + ".";
+        }
+
+        return textoActual;
+    }
 
     public String calcularResultado (double num1, double num2, String operador){
         switch (operador){
             //Suma
             case "+":
                 System.out.println(num1 + num2);
-                return String.valueOf(num1 + num2);//Realiza la suma y devuelve el valor en String
+                return String.valueOf(num1 + num2); //Realiza la suma y devuelve el valor en String
             case "-":
                 return String.valueOf(num1 - num2);
             case "X":
