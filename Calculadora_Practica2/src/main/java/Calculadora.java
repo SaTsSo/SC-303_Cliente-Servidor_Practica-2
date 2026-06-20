@@ -46,7 +46,8 @@ public class Calculadora extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setEnabled(true);
         setTitle("Calculadora");
-        setSize(500, 500);
+        setSize(550, 600);
+        setLocationRelativeTo(null); //Centra la ventana
         setVisible(true);
 
         lblResultado.setText("0"); //Establecer el Label de resultado en cero
