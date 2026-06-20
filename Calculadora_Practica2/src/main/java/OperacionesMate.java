@@ -42,6 +42,11 @@ public class OperacionesMate {
             case "X":
                 return String.valueOf(num1 * num2);
             case "/":
+                if(num2 == 0)
+                     {
+                      throw new ArithmeticException("No se puede dividir entre cero");//Excepcion por division entre cero
+                 }
+    {
                 return String.valueOf(num1 / num2);
             default:
                 throw new IllegalArgumentException("Operador no válido: " + operador);//Excepcion
